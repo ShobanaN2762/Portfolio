@@ -36,6 +36,11 @@ const Hero = () => {
               <h1> into tangible, high-performing </h1>
               <h1> products.</h1>
             </div>
+
+            <p className="text-white-50 md:text-xl relative z-10 pointer-event-none">
+              Hi, I'm Shobana, a developer based in Banglore with a passion for
+              code.
+            </p>
           </div>
         </header>
       </div>
