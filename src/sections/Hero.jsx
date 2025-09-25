@@ -1,3 +1,4 @@
+import Button from "../components/Button.jsx";
 import { words } from "../constants/index.js";
 
 const Hero = () => {
@@ -13,8 +14,7 @@ const Hero = () => {
           <div className="flex flex-col gap-7">
             <div className="hero-text">
               <h1>
-                {" "}
-                Transalting ambitious{" "}
+                Transalting ambitious
                 <span className="slide">
                   <span className="wrapper">
                     {words.map((word) => (
@@ -41,8 +41,14 @@ const Hero = () => {
               Hi, I'm Shobana, a developer based in Banglore with a passion for
               code.
             </p>
+            <Button
+              className="md:w-80 md:h-16 w-60 h-12"
+              id="button"
+              text="See my Work"
+            />
           </div>
         </header>
+        {/* {RIGHT: HERO CONTENT} */}
       </div>
     </section>
   );
