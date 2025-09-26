@@ -1,7 +1,7 @@
 const words = [
-  { text: "Ideas", imagePath: "/images/ideas.svg" },
-  { text: "Designs", imagePath: "/images/designs.svg" },
-  { text: "Concepts", imagePath: "/images/concepts.svg" },
+  { text: "Ideas", imgPath: "/images/ideas.svg" },
+  { text: "Designs", imgPath: "/images/designs.svg" },
+  { text: "Concepts", imgPath: "/images/concepts.svg" },
 ];
 
 const navLinks = [
