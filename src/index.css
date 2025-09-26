@@ -326,13 +326,13 @@ section {
 .slide {
   display: inline-block;
   flex-direction: column;
-  transition: all cubic-bezier(0.71, 0.3, 0.9, 1);
+  transition: all cubic-bezier(0.71, 0.03, 0.34, 1);
 }
 
 .wrapper {
   display: flex;
   flex-direction: column;
-  animation: wordSlider 21s infinite cubic-bezier(0.9, 0.01, 0.3, 0.99);
+  animation: wordSlider 20s infinite cubic-bezier(0.9, 0.01, 0.3, 0.99);
 }
 
 @keyframes wordSlider {

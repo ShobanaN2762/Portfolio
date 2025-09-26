@@ -1,7 +1,26 @@
 import Button from "../components/Button.jsx";
+import HeroExperience from "../components/HeroModels/HeroExperience.jsx";
 import { words } from "../constants/index.js";
+import { useGSAP } from "@gsap/react";
+import gsap from "gsap";
 
 const Hero = () => {
+  useGSAP(() => {
+    gsap.fromTo(
+      ".hero-text h1",
+      {
+        y: 50,
+        opacity: 0,
+      },
+      {
+        y: 0,
+        opacity: 1,
+        stagger: 0.2,
+        duration: 1,
+        ease: "power2.inOut",
+      }
+    );
+  });
   return (
     <section id="hero" className="relative overflow-hidden">
       <div className="absolute top-0 left-0 z-10">
@@ -14,18 +33,18 @@ const Hero = () => {
           <div className="flex flex-col gap-7">
             <div className="hero-text">
               <h1>
-                Transalting ambitious
+                Shaping
                 <span className="slide">
                   <span className="wrapper">
-                    {words.map((word) => (
+                    {words.map((word, index) => (
                       <span
-                        key={word.text}
+                        key={index}
                         className="flex items-center md:gap-3 gap-1 pb-2"
                       >
                         <img
-                          src={word.imagePath}
-                          alt={word.text}
-                          className="xl:size-12 md:size-10 size-7 md:p-2 p-1 rounded-full bg-amber-50"
+                          src={word.imgPath}
+                          alt="person"
+                          className="xl:size-12 md:size-10 size-7 md:p-2 p-1 rounded-full bg-white-50"
                         />
                         <span>{word.text}</span>
                       </span>
@@ -33,22 +52,29 @@ const Hero = () => {
                   </span>
                 </span>
               </h1>
-              <h1> into tangible, high-performing </h1>
-              <h1> products.</h1>
+              <h1>into Real Projects</h1>
+              <h1>that Deliver Results</h1>
             </div>
 
-            <p className="text-white-50 md:text-xl relative z-10 pointer-event-none">
-              Hi, I'm Shobana, a developer based in Banglore with a passion for
+            <p className="text-white-50 md:text-xl relative z-10 pointer-events-none">
+              Hi, I’m Adrian, a developer based in Croatia with a passion for
               code.
             </p>
+
             <Button
-              className="md:w-80 md:h-16 w-60 h-12"
-              id="button"
-              text="See my Work"
+              text="See My Work"
+              className="z-20 md:w-80 md:h-16 w-60 h-12"
+              id="counter"
             />
           </div>
         </header>
+
         {/* {RIGHT: HERO CONTENT} */}
+        <figure>
+          <div className="hero-3d-layout">
+            <HeroExperience />
+          </div>
+        </figure>
       </div>
     </section>
   );
