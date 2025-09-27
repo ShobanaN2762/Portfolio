@@ -80,7 +80,7 @@ export const ShowcaseSection = () => {
 
             <div className="project" ref={project3Ref}>
               <div className="image-wrapper bg-[#ffe7eb]">
-                <img src="/images/project3.png" alt="" />
+                <img src="/images/project3.png" alt="Travel Tracker" />
               </div>
               <h2>WorldWise </h2>
               <p className="text-white-50 md:text-xl">
